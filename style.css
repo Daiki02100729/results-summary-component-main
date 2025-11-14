@@ -1,0 +1,296 @@
+@charset "utf-8";
+
+:root {
+  /* primary */
+  --red: hsl(0, 100%, 67%);
+  --yellow: hsl(39, 100%, 56%);
+  --green: hsl(166, 100%, 37%);
+  --blue: hsl(234, 85%, 45%);
+
+  /* gradients(background) */
+
+  --slate-blue: hsl(252, 100%, 67%);
+  --loyal-blue: hsl(241, 81%, 54%);
+
+  /* circle */
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-blue: hsl(224, 30%, 27%);
+
+  /* font */
+  --ff: "Hanken Grotesk", system-ui, sans-serif;
+
+  /*  Content背景（透明度8%）*/
+  --red-bg: hsla(0, 100%, 67%, 0.08);
+  --yellow-bg: hsla(39, 100%, 56%, 0.08);
+  --green-bg: hsla(166, 100%, 37%, 0.08);
+  --blue-bg: hsla(234, 85%, 45%, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: 18px;
+  min-height: 100vh;
+}
+
+.card {
+  width: min(100%, 730px);
+  margin-inline: auto;
+}
+
+/* result */
+
+.result {
+  background: var(--loyal-blue);
+  border-radius: 0 0 2rem 2rem;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+}
+
+.result-heading {
+  color: var(--light-lavender);
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: .8;
+}
+
+.diary {
+  display: grid;
+  align-content: center;
+  background: var(--violet-blue);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.number {
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: 800;
+}
+
+.num-of {
+  color: var(--light-lavender);
+  opacity: .6;
+}
+
+.great-sc {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-heading2 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.great-sc p {
+  max-width: 33ch;
+  color: var(--white);
+  opacity: .6;
+  font-size: 1rem;
+}
+
+/* summary */
+
+.summary {
+  padding: 2rem;
+  background-color: var(--white);
+}
+
+.sum-heading {
+  color: var(--dark-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.contents {
+  margin: 2rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  border-radius: .8rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.sum-title {
+  display: flex;
+  gap: 1rem;
+}
+
+.reaction {
+  background: var(--red-bg);
+}
+
+.red p {
+  color: var(--red);
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.yellow p {
+  color: var(--yellow);
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.green p {
+  color: var(--green);
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.blue p {
+  color: var(--blue);
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.memory {
+  background: var(--yellow-bg);
+
+}
+
+.verbal {
+  background: var(--green-bg);
+
+}
+
+.visual {
+  background: var(--blue-bg);
+}
+
+.score {
+  font-weight: 700;
+  color: var(--dark-blue);
+  opacity: 0.8;
+}
+
+span {
+  opacity: .5;
+}
+
+/* button */
+
+.btn {
+  display: block;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  background: var(--dark-blue);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media(min-width: 730px) {
+
+  html,
+  body {
+    height: 100vh;
+  }
+
+  body {
+    background: var(--light-lavender);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--white);
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  .result,
+  .summary {
+    border-radius: 0;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 3rem 1rem;
+    border-radius: 2rem 0 0 2rem;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
